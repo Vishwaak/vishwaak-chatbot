@@ -4,15 +4,15 @@ import os
 
 bot = ChatBot('Bot')
 bot.set_trainer(ListTrainer)
- 
-for files in os.listdir ('/home/xerous/Desktop/chatbot\chatterbot-corpus/chatterbot_corpus '):
-	data = open('/home/xerous\Desktop/chatbot/chatterbot-corpus/chatterbot_corpus '+ files , 'r').readlines()
+x = os.path.join( '//home', 'xerous' , 'Desktop' , 'chatbot' , 'chatterbot-corpus','chatterbot_corpus' , 'data' , 'english/')
+for files in os.listdir (x):
+	data = open(x + files , 'r').readlines()
 	bot.train(data)
 while True:
-	message = input('You: ')
-	if message.strip() != 'bye':
-		reply = bot.get_response(message)
-		print('chatbot :', reply)
-		if message.strip() == 'Bye':
+	msg = raw_input('You : ')
+	if msg.strip() != 'bye':
+		reply = bot.get_response(msg)
+		print 'chatbot :' + reply
+		if msg.strip() == 'Bye':
 			print('chatbot : bye')
 			break
