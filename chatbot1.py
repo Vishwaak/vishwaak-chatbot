@@ -9,10 +9,10 @@ for files in os.listdir (x):
 	data = open(x + files , 'r').readlines()
 	bot.train(data)
 while True:
-	msg = raw_input('You : ')
+	msg = input('You : ')
 	if msg.strip() != 'bye':
 		reply = bot.get_response(msg)
-		print 'chatbot :' + reply
+		print ('chatbot :' , reply)
 		if msg.strip() == 'Bye':
 			print('chatbot : bye')
 			break
