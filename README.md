@@ -1,2 +1,2 @@
 # vishwaak-chatbot
-#Contains the chatbot for py(ver 2.7)
+#Contains the chatbot for telegram and for terminal
